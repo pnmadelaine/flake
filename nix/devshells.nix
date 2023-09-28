@@ -5,10 +5,7 @@
 }: {
   default = pkgs.mkShell {
     packages = builtins.attrValues {
-      inherit
-        (pkgs)
-        alejandra
-        ;
+      inherit (pkgs) alejandra;
     };
   };
 }
