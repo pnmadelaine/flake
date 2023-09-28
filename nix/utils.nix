@@ -1,6 +1,7 @@
-{sources ? import ./sources.nix}: let
-  inherit (builtins) listToAttrs;
-in rec {
-  nameValuePair = name: value: {inherit name value;};
-  genAttrs = names: f: listToAttrs (map (n: nameValuePair n (f n)) names);
+{
+  sources ? import ./sources.nix,
+  lib ? sources.nixpkgs.lib,
+  systems ? import ./systems.nix,
+}: {
+  eachSystem = lib.genAttrs systems;
 }
