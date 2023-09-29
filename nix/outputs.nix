@@ -1,7 +1,7 @@
 {
   sources ? import ./sources.nix,
   systems ? import ./systems.nix,
-  utils ? import ./utils.nix {inherit sources;},
+  utils ? import ./utils.nix {inherit sources systems;},
 }: let
   inherit (utils) eachSystem;
 in {
