@@ -7,4 +7,8 @@
 in {
   packages = eachSystem (system: import ./packages.nix {inherit sources system;});
   devShells = eachSystem (system: import ./devshells.nix {inherit sources system;});
+  templates.default = {
+    path = ./..;
+    description = "❄";
+  };
 }
