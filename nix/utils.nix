@@ -1,6 +1,6 @@
 {
-  sources ? import ./sources.nix,
-  lib ? sources.nixpkgs.lib,
+  inputs ? import ./inputs.nix,
+  lib ? inputs.nixpkgs.lib,
   systems ? import ./systems.nix,
 }: {
   eachSystem = lib.genAttrs systems;

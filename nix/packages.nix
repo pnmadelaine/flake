@@ -1,7 +1,7 @@
 {
-  sources ? import ./sources.nix,
+  inputs ? import ./inputs.nix,
   system ? builtins.currentSystem or "unknown-system",
-  pkgs ? sources.nixpkgs.legacyPackages.${system},
+  pkgs ? inputs.nixpkgs.legacyPackages.${system},
 }: {
   inherit (pkgs) hello;
 }
