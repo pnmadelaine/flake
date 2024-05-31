@@ -5,7 +5,7 @@
       flake = false;
     };
 
-    nixpkgs.url = "nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
   outputs = inputs: import ./nix/outputs.nix { inherit inputs; };
