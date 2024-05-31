@@ -4,5 +4,5 @@
   pkgs ? inputs.nixpkgs.legacyPackages.${system},
 }:
 {
-  default = pkgs.mkShell { packages = [ pkgs.alejandra ]; };
+  default = pkgs.mkShell { packages = [ pkgs.nixfmt-rfc-style ]; };
 }
